@@ -1,0 +1,153 @@
+{
+	"info": {
+		"_postman_id": "39a5d82e-eccc-4d87-913d-484a496c1756",
+		"name": "Productos",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Alta Producto",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "nombre",
+							"value": "Milanesas",
+							"type": "default"
+						},
+						{
+							"key": "precio",
+							"value": "700",
+							"type": "default"
+						},
+						{
+							"key": "tiempoEspera",
+							"value": "15",
+							"type": "default"
+						},
+						{
+							"key": "area",
+							"value": "Cocina",
+							"type": "default"
+						},
+						{
+							"key": "tipo",
+							"value": "Comida",
+							"type": "default"
+						},
+						{
+							"key": "stock",
+							"value": "20",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:666/productos/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "666",
+					"path": [
+						"productos",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar Productos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:666/productos/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "666",
+					"path": [
+						"productos",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Lista Producto por Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:666/productos/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "666",
+					"path": [
+						"productos",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Borrar Producto",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:666/productos/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "666",
+					"path": [
+						"productos",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Modificar Producto",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n     \"nombre\" : \"Milanesa de pollo\",\r\n    \"precio\" : \"750\",\r\n    \"tiempo\" : \"10\",\r\n    \"area\" : \"Cocina\",\r\n    \"tipo\" : \"Comida\",\r\n    \"stock\" : \"15\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:666/productos/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "666",
+					"path": [
+						"productos",
+						"2"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
